@@ -1,0 +1,43 @@
+Agendamento
+ [x] T 01 visitante ve apenas especialidades ativas
+ [x] T 02 cadastro com email existente e recusado
+ [x] Senha guardada somente como hash
+ [x] T 05 agendamento em horario livre aparece em meus agendamentos
+ [x] Calendario do mes bate com horarios do dia
+ [x] T 07 horario fora do expediente nao e ofertado nem aceito
+ [x] T 08 cancelamento com antecedencia libera o horario
+ [x] T 09 cancelamento com menos de 24h e recusado
+ [x] T 10 reagendamento para horario ocupado mantem original
+ [x] Reagendamento valido cria nova e cancela original
+ [x] Rn 01 limite de cinco agendamentos futuros
+ [x] T 11 inativar profissional com consultas futuras e recusado
+ [x] Rn 09 bloqueio sobre consulta confirmada e recusado
+ [x] Feriado bloqueia todos os profissionais
+ [x] T 12 relatorio respeita filtros
+ [x] Uc 13 situacao atualizada com historico e consulta futura nao pode ser realizada
+ [x] T 14 injecao sql nao e executada
+ [x] T 15 erro durante gravacao faz rollback
+ [x] Regra de agenda incoerente ou sobreposta e recusada
+
+Concorrencia
+ [x] T 06 apenas uma reserva simultanea e confirmada
+
+Disponibilidade
+ [x] Rn 05 duracao mais intervalo sem ultrapassar o expediente
+ [x] Rn 06 bloqueio parcial remove o horario
+ [x] Intervalos encostados nao conflitam
+ [x] Conflito por sobreposicao com duracao diferente
+ [x] Horarios passados nao sao oferecidos
+ [x] Varias regras no mesmo dia em ordem
+
+Http
+ [x] Apos login volta para a pagina pedida
+ [x] Paciente nao e desviado para area admin apos login
+ [x] T 03 login com senha incorreta mensagem generica
+ [x] T 04 paciente nao acessa consulta de outro e evento e registrado
+ [x] Paciente nao acessa area administrativa
+ [x] Visitante enviado ao login nas areas restritas
+ [x] Formulario sem token csrf e recusado
+ [x] T 01 catalogo publico sem login
+ [x] Fluxo completo de agendamento pela interface
+

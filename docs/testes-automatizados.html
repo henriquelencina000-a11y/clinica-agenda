@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-family: Source SansSerif Pro, Arial, sans-serif;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2rem;
+                background-color: #fff;
+                color: #000;
+            }
+
+            body > ul > li {
+                font-size: larger;
+            }
+
+            h2 {
+                font-size: larger;
+                text-decoration-line: underline;
+                text-decoration-thickness: 2px;
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0 0 2rem;
+                padding: 0 0 0 1rem;
+                text-indent: -1rem;
+            }
+
+            .success:before {
+                color: #4e9a06;
+                content: '✓';
+                padding-right: 0.5rem;
+            }
+
+            .defect {
+                color: #a40000;
+            }
+
+            .defect:before {
+                color: #a40000;
+                content: '✗';
+                padding-right: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Agendamento</h2>
+        <ul>
+            <li class="success">T 01 visitante ve apenas especialidades ativas</li>
+            <li class="success">T 02 cadastro com email existente e recusado</li>
+            <li class="success">Senha guardada somente como hash</li>
+            <li class="success">T 05 agendamento em horario livre aparece em meus agendamentos</li>
+            <li class="success">Calendario do mes bate com horarios do dia</li>
+            <li class="success">T 07 horario fora do expediente nao e ofertado nem aceito</li>
+            <li class="success">T 08 cancelamento com antecedencia libera o horario</li>
+            <li class="success">T 09 cancelamento com menos de 24h e recusado</li>
+            <li class="success">T 10 reagendamento para horario ocupado mantem original</li>
+            <li class="success">Reagendamento valido cria nova e cancela original</li>
+            <li class="success">Rn 01 limite de cinco agendamentos futuros</li>
+            <li class="success">T 11 inativar profissional com consultas futuras e recusado</li>
+            <li class="success">Rn 09 bloqueio sobre consulta confirmada e recusado</li>
+            <li class="success">Feriado bloqueia todos os profissionais</li>
+            <li class="success">T 12 relatorio respeita filtros</li>
+            <li class="success">Uc 13 situacao atualizada com historico e consulta futura nao pode ser realizada</li>
+            <li class="success">T 14 injecao sql nao e executada</li>
+            <li class="success">T 15 erro durante gravacao faz rollback</li>
+            <li class="success">Regra de agenda incoerente ou sobreposta e recusada</li>
+        </ul>
+        <h2>Concorrencia</h2>
+        <ul>
+            <li class="success">T 06 apenas uma reserva simultanea e confirmada</li>
+        </ul>
+        <h2>Disponibilidade</h2>
+        <ul>
+            <li class="success">Rn 05 duracao mais intervalo sem ultrapassar o expediente</li>
+            <li class="success">Rn 06 bloqueio parcial remove o horario</li>
+            <li class="success">Intervalos encostados nao conflitam</li>
+            <li class="success">Conflito por sobreposicao com duracao diferente</li>
+            <li class="success">Horarios passados nao sao oferecidos</li>
+            <li class="success">Varias regras no mesmo dia em ordem</li>
+        </ul>
+        <h2>Http</h2>
+        <ul>
+            <li class="success">Apos login volta para a pagina pedida</li>
+            <li class="success">Paciente nao e desviado para area admin apos login</li>
+            <li class="success">T 03 login com senha incorreta mensagem generica</li>
+            <li class="success">T 04 paciente nao acessa consulta de outro e evento e registrado</li>
+            <li class="success">Paciente nao acessa area administrativa</li>
+            <li class="success">Visitante enviado ao login nas areas restritas</li>
+            <li class="success">Formulario sem token csrf e recusado</li>
+            <li class="success">T 01 catalogo publico sem login</li>
+            <li class="success">Fluxo completo de agendamento pela interface</li>
+        </ul>
+    </body>
+</html>
